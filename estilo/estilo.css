@@ -6,3 +6,53 @@
 section{
     padding: 50px;
 }
+
+@media (max-width: 5200px){
+    .placasgrid{
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        max-width: 800px;
+        padding: 10px;
+        margin: 0 auto;
+        grid-gap: 20px;
+    }
+
+    .placasgrid > div{
+        width: 300px;
+    }
+
+    /*
+
+    NÃO ACHEI QUE FICOU LEGAL
+
+    .placasgrid > div{
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        width: 250px;
+        align-items: center;
+        padding-top: 50px;
+    }
+
+    .placasgrid > div > p.tituloplaca{
+        grid-column: 1/3;
+    }
+
+    .placasgrid > div > img{
+        grid-column: 1;
+        padding-top: 5px;
+    }
+
+    .placasgrid > div > p.textoplaca{
+        grid-column: 2;
+        padding-top: 5px;
+    }
+    */
+}
+
+@media (max-width: 600px){
+    .placasgrid{
+        display: block;
+        align-items: center;
+        text-align: center;
+    }
+}
