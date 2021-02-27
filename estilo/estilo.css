@@ -12,11 +12,6 @@ section{
 }
 
 @media (max-width: 5200px){
-    body{
-        margin-left: 200px;
-        margin-right: 200px;
-    }
-
     .placasgrid{
         display: grid;
         grid-template-columns: repeat(2, 1fr);
@@ -59,11 +54,6 @@ section{
 }
 
 @media (max-width: 600px){
-    body{
-        margin-left: auto;
-        margin-right: auto;
-    }
-
     .placasgrid{
         display: block;
         align-items: center;
