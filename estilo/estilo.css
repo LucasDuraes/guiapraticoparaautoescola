@@ -59,6 +59,11 @@ section{
 }
 
 @media (max-width: 600px){
+    body{
+        margin-left: auto;
+        margin-right: auto;
+    }
+
     .placasgrid{
         display: block;
         align-items: center;
