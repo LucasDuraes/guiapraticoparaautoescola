@@ -1,7 +1,164 @@
 *{
     text-align: left;
     list-style: none;
+    margin: 0px;
+    padding: 0px;
+    font-size: 1.2rem;
+    font-family: Arial;
 }
+
+
+/*estilo header*/
+
+
+.a-header{
+    text-decoration: none;
+    color: white;
+}
+
+.cabecalho01-header{
+    background: #1d1e20;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+}
+
+.menu-header{
+    display: flex;
+}
+
+.menu-header li{
+    margin-left: 10px;
+}
+
+.menu-header li a{
+    display: block;
+    padding: 10px;
+}
+
+#btn-mobile{
+    display: none;
+}
+
+#btn-logar{
+    margin-left: 10px;
+    display: block;
+    padding: 10px;
+    background: none;
+    text-decoration: none;
+    color: white;
+    border: none;
+    cursor: pointer;
+}
+
+#formlogar{
+    display: none;
+}
+
+#formlogar.mostrarlogar{
+    display: grid;
+    grid-template-rows: repeat(3, 1fr);
+    max-width: 350px;
+    position:absolute;
+	right:0px;
+	width:300px;
+    background-color: #1d1e20;
+    padding: 20px;
+    color: white;
+}
+
+#formlogar.mostrarlogar input{
+    background-color: #1d1e20;
+    margin-bottom: 5px;
+    color: white;
+    border: 2px solid rgba(255, 255, 255, 0.05);
+}
+
+
+/*Responsivo*/
+@media (max-width: 600px) {
+    .menu-header{
+        display: block;
+        position: absolute;
+        width: 100%;
+        top: 70px;
+        right: 0px;
+        background: #1d1e20;
+        height: 0px;
+        transition: .6s;
+        z-index: 1000;
+        visibility: hidden;
+        overflow-y: hidden;
+    }
+
+    #nav.active .menu-header{
+        height: calc(100vh - 70px);
+        visibility: visible;
+        overflow-y: auto;
+    }
+
+    .menu-header .li-header {
+        padding: 1rem 0;
+        margin: 0 1rem;
+        border-bottom: 2px solid rgba(255, 255, 255, 0.05);
+    }
+
+    #btn-logar{
+        display: inline;
+        margin-left: 0px;
+        text-align: left;
+        background: none;
+        text-decoration: none;
+        color: white;
+        border: none;
+        cursor: pointer;
+    }
+
+    #btn-mobile{
+        display: flex;
+        padding: .5rem 1rem;
+        font-size: 1rem;
+        border: none;
+        background: none;
+        color: white;
+        cursor: pointer;
+        gap: .5rem;
+    }
+
+    #hamburger{
+        display: block;
+        border-top: 2px solid;
+        width: 20px;
+    }
+
+    #hamburger::after, #hamburger::before{
+        content: '';
+        display: block;
+        width: 20px;
+        height: 2px;
+        background: currentColor;
+        margin-top: 5px;
+        transition: .3s;
+        position: relative;
+    }
+
+    #nav.active #hamburger {
+        border-top-color: transparent;
+    }
+
+    #nav.active #hamburger::before{
+        transform: rotate(135deg);
+    } 
+
+    #nav.active #hamburger::after{
+        transform: rotate(-135deg);
+        top: -7px;
+    } 
+}
+
+/*fim estilo header*/
 
 h1, h2, h3, h4, h5, h6{
     text-align: center;

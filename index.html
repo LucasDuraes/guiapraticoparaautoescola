@@ -5,8 +5,58 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Guia Pratico Para o Exame do DETRAN</title>
     <link rel="stylesheet" href="./estilo/estilo.css">
+
+    <script>
+        function respondivo(){
+            const nav = document.getElementById('nav')
+            nav.classList.toggle('active')
+            const active = nav.classList.contains('active')
+            
+            event.currentTarget.setAttribute('aria-expanded', active)
+            if (active) {
+                event.currentTarget.setAttribute('aria-label','Fechar Menu')
+            }else{
+                event.currentTarget.setAttribute('aria-label','Abrir Menu')
+            }
+        }
+
+        function displayLogar(){
+            const logar = document.getElementById('formlogar')
+            logar.classList.toggle('mostrarlogar')
+            //const active = nav.classList.contains('active')
+        }
+    </script>
 </head>
 <body>
+    <!--header-->
+
+    <header class="cabecalho01-header">
+        <a class="a-header" href="#">LOGO</a>
+        <nav id="nav">
+            <button aria-label="Abrir Menu" id="btn-mobile" onclick="respondivo()" aria-haspopup="true" aria-controls="menu" aria-expanded="false">MENU
+                <span id="hamburger"></span>
+            </button>
+            <ul class="menu-header">
+                <li class="li-header"><a class="a-header" href="#">Todas as Notícia</a></li>
+
+                <!--Isso foi alterrado-->
+                <li class="li-header"><button id="btn-logar" onclick="displayLogar()">Logar</button>
+                    <form action="" id="formlogar">
+                        <label for="username">Nome de Usuário</label>
+                        <input type="text" name="username" id="username">
+                        <label for="usersenha">Senha</label>
+                        <input type="password" name="usersenha" id="usersenha">
+                        <input type="submit" value="Entrar">
+                    </form>
+                </li>
+                <!-------------------------------------------------------------------------------> 
+                
+                <li class="li-header"><a class="a-header" href="#">Registrar-se</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!--end header-->
     <section class="apresentacao">
         <h1>Manual do Aluno</h1>
         <h2>Um simples guia para te ajudar a estudar :)</h2>
